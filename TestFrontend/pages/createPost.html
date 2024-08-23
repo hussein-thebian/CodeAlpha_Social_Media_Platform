@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    
+    <link rel="stylesheet" href="../styles/createPost.css">
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.7/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+    <script src="../scripts/utils.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBackToProfile()">
+        <i class="fa-solid fa-caret-left"></i> <!-- Font Awesome icon -->
+    </button>
+    <div class="create-post-container">
+        <div class="logo-container">
+            <div class="logo twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="logo instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <h2>Create New Post</h2>
+            <form id="createPostForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter the title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Caption</label>
+                    <textarea id="content" name="content" placeholder="Write your caption here" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" name="tags" placeholder="Enter tags, e.g., nature, travel" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter the location" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <button type="submit" class="submit-btn">Create Post</button>
+            </form>
+        </div>
+    </div>
+    <script src="../scripts/createPost.js"></script>
+</body>
+</html>

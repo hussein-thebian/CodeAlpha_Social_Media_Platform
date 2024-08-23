@@ -1,0 +1,355 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden;
+    border-radius: 40%;
+    margin-top: 20px;
+}
+
+.profile-content {
+    background-color: rgb(252, 239, 239);
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Adjust the max width as needed */
+    height: 100%; /* Full height of profile-container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+}
+
+.profile-picture img {
+    border-radius: 10%;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #000000;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #030303;
+}
+
+#bio {
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+#followersIcon,#followingIcon{
+    cursor: pointer;
+}
+
+.add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px; /* Space between the Add Post and Edit Profile buttons */
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#addPostIcon, #editProfileIcon {
+    font-size: 48px;
+    color: #000000; /* Icon color */
+}
+
+#addPostText, #editProfileText {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+/* User Posts Container */
+#userPostsContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Post Card */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Adjust max-width as needed */
+    position: relative;
+}
+
+.post-card:hover {
+    transform: scale(1.05); /* Increase the size slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow */
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #e0245e; /* Heart color */
+    margin-left: 16px;
+}
+
+.like-button:hover {
+    color: #c8102e; /* Darker color on hover */
+}
+
+.like-count, .comment-count {
+    font-size: 14px;
+    margin-right: 16px;
+}
+
+.post-title {
+    display: inline-block;
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 5px; /* Space between title and location */
+}
+
+.post-location {
+    display: inline-block;
+    font-size: 16px; /* Smaller size for location */
+    color: rgb(0, 0, 0); /* Optional: make the location text a different color */
+}
+
+.post-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.post-card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.post-card .tags {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.no-posts {
+    text-align: center;
+    font-size: 24px;
+    color: #777;
+    margin-top: 50px;
+}
+
+.counts-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Vertically center items */
+    margin-top: 10px; /* Optional: Add some space above the container */
+  }
+  
+  /* Style for the like and comment count containers */
+.like-count, .comment-count {
+    font-size: 1em; /* Adjust the font size for the whole element */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Style specifically for the numbers */
+.like-count .count-number, .comment-count .count-number {
+    font-size: 1em; /* Increase the font size for the numbers */
+    font-weight: bolder; /* Make the numbers bold */
+    color: #000000; /* Optional: Change the color of the numbers */
+  }
+  .like-button {
+    background: white; /* Button background color */
+    border: none;      /* Removes default border */
+    cursor: pointer;   /* Changes cursor to pointer on hover */
+    font-size: 48px;   /* Size of the heart icon */
+    color: #ccc;       /* Default color of the heart icon */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.like-button.liked .heart-icon {
+    color: red; /* Color of the heart when liked */
+}
+
+.like-button .heart-icon {
+    color: inherit; /* Inherit color from the button (default or red if liked) */
+}
+
+/*Home button*/
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 5px 5px;
+    background-color: #ffffff;
+    color: #4e4094;
+    border: none;
+    border-radius: 20%;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is on top of other elements */
+    transition: background-color 0.3s ease;
+}
+
+.home-button i {
+    margin-right: 5px;
+}
+
+.home-button:hover {
+    background-color: #aea2fd;
+}
+
+/*Logout button*/
+.logout-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #4e4094;
+    border: none;
+    border-radius: 20%;
+    padding: 5px 5px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is on top of other elements */
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #555;
+}
+
+/* Delete Button */
+.delete-post-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(84, 45, 161);
+    border: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 19%;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .delete-post-button:hover {
+    color: #ff0000; /* Darker red on hover */
+  }
+  
+  .delete-post-button:focus {
+    outline: none;
+  }
+
+  /* View Post Info Button */
+.view-post-info-button {
+    position: absolute;
+    top: 10px;
+    right: 50px; /* Adjusted to position it left of the delete button */
+    background-color: rgb(84, 45, 161); /* Same background color as the delete button */
+    border: none;
+    font-size: 28px;
+    color: #ffffff; /* White color for the icon */
+    cursor: pointer;
+    border-radius: 19%; /* Same border radius as the delete button */
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.view-post-info-button:hover {
+    color: #ff0000; /* Optional: Change the color on hover (blue in this case) */
+}
+
+.view-post-info-button:focus {
+    outline: none;
+}
+
+/* Position for Back to Top Button */
+.back-to-top-button {
+    position: fixed; /* Fixes the button in place */
+    bottom: 30px; /* Distance from the bottom of the viewport (below the logout button) */
+    right: 20px; /* Distance from the right of the viewport */
+    background-color: #ffffff; /* Button color */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 10px; /* Space around the icon */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for better visibility */
+}
+
+.back-to-top-button i {
+    color: #4e4094; /* Icon color */
+    font-size: 24px; /* Adjust size as needed */
+}
+
+.back-to-top-button:hover {
+    opacity: 0.8; /* Slightly dim on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#notFollowingList {
+    margin-top: 20px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #c41bde;
+}
+
+.user-item img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 30px;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.follow-btn {
+    background-color: #591892;
+    color: white;
+    margin-left: auto;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #b866de;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #4e4094;
+    border: none;
+    border-radius: 20%;
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+#searchBar {
+    width: 80%; /* Adjust the width as needed */
+    padding: 15px; /* Add padding for a larger input field */
+    font-size: 18px; /* Increase the font size */
+    border: 2px solid #ccc; /* Add a border */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the search bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change the border color when the search bar is focused */
+#searchBar:focus {
+    border-color: #5a2087; /* Change the color to a blue tone */
+    outline: none; /* Remove the default outline */
+}

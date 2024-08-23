@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../styles/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.7/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+    <script src="../scripts/utils.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <button title="Home" class="home-button" onclick="goBackToHome()">
+        <i class="fa-solid fa-house"></i><!-- Font Awesome icon -->
+    </button>
+    <button title="Logout" class="logout-button" onclick="logout()">
+        <i class="fa-solid fa-sign-out-alt"></i> <!-- Font Awesome logout icon -->
+    </button>   
+    <button class="back-to-top-button" id="backToTopButton">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button> 
+    <div class="profile-container">
+        <div class="profile-content">
+            <div class="profile-picture">
+                <img id="profilePic" src="" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h1 id="username"></h1>
+                <p id="bio"></p>
+                <p id="birthdate"></p>    
+            </div>
+            <div class="stats-container">
+                <div class="stat" id="postsStat">
+                    <i class="fas fa-file-alt"></i> 
+                    <p id="postCount">0 Posts</p>
+                </div>
+                <div class="stat" id="followersStat">
+                    <i class="fa fa-user-friends" id="followersIcon"></i> 
+                    <p id="followerCount">0 Followers</p>
+                </div>
+                <div class="stat" id="followingStat">
+                    <i class="fa fa-user-plus" id ="followingIcon"></i> 
+                    <p id="followingCount">0 Following</p>
+                </div>
+            </div>
+            <div class="add-post-container">
+                <div class="action-item" id="addPostIcon">
+                    <i class="fas fa-plus-circle"></i>
+                    <p id="addPostText">Add Post</p>
+                </div>
+                <div class="action-item" id="editProfileIcon" onclick="goToEditProfile()">
+                    <i class="fas fa-user-edit"></i>
+                    <p id="editProfileText">Edit Profile</p>
+                </div>
+            </div>
+            <div id="userPostsContainer">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/profile.js"></script>
+</body>
+</html>

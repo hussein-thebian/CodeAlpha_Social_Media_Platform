@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.create-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.form-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #8d2eb969;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #58256c;
+}
+
+/* Logo styles */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 128px; /* Increase the logo size */
+    color: #ffffff;
+    animation: moveLogos 5s ease-in-out infinite;
+}
+
+.logo.twitter {
+    position: absolute;
+    left: -200px;
+}
+
+.logo.instagram {
+    position: absolute;
+    right: -200px;
+}
+
+@keyframes moveLogos {
+    0% {
+        transform: translateY(-100%); /* Start above the viewport */
+    }
+    25% {
+        transform: translateY(0); /* Move to the middle */
+    }
+    75% {
+        transform: translateY(0); /* Stay in the middle */
+    }
+    100% {
+        transform: translateY(-100%); /* Move back up */
+    }
+}
+
+    .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #ffffff;
+        color: #4e4094;
+        border: none;
+        border-radius: 20%;
+        font-size: 48px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure the button is on top of other elements */
+        transition: background-color 0.3s ease;
+    }
+
+
+
+    .back-button:hover {
+        background-color: #555;
+    }

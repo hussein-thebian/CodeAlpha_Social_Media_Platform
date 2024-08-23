@@ -1,0 +1,170 @@
+/* styles/register.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Align items to the end (right) of the flex container */
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.word-container {
+    position: fixed;
+    left: 15%;
+    top: 0;
+    width: 40%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.word {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    opacity: 0;
+    animation: curtain 12s linear infinite;
+}
+
+@keyframes curtain {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Adjust timings for each word */
+.word:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.word:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.register-container {
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 490px;
+    overflow-y: scroll;
+    margin-right: 1px;
+    opacity: 0.99;
+}
+
+/* Customize scrollbar */
+.register-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.register-container::-webkit-scrollbar-thumb {
+    background: #4b2dc5;
+    border-radius: 6px;
+}
+
+.register-container::-webkit-scrollbar-thumb:hover {
+    background: #33139383;
+}
+
+.register-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="file"]{
+    margin-bottom: 15px;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b2dc5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #33139383;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #4b2dc5;
+}

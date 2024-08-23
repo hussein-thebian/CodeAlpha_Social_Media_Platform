@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    gap: 200px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    height: 400px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#followersList, #followingList {
+    margin-top: 20px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-item img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 30px;
+}
+
+.username {
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #4e4094;
+    border: none;
+    border-radius: 20%;
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is on top of other elements */
+    transition: background-color 0.3s ease;
+}
+
+
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Common button styles */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Remove Follower button */
+.remove-follower-btn {
+    background-color: #8648ad94; /* Red color */
+    color: white;
+    margin-left: 10px;
+}
+
+.remove-follower-btn:hover {
+    background-color: #5f33a2; /* Darker red on hover */
+}
+
+/* Unfollow button */
+.unfollow-btn {
+    background-color: #8648ad94; /* Blue color */
+    color: white;
+    margin-left: 10px;
+}
+
+.unfollow-btn:hover {
+    background-color: #5f33a2; /* Darker blue on hover */
+}
+
+/* Additional styling for the user-item div */
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #c41bde;
+}
+
+.user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-item .username {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: auto;
+}

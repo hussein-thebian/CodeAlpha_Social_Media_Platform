@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 12px;
+    background: url('../assets/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px; /* Adjusted gap between the image and the cards */
+    align-items: flex-start; /* Align the cards with the top of the image */
+}
+
+.post-image {
+    width: 300px; /* Smaller image size */
+    height: 300px;
+    margin-right: 20px; /* Space between image and cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    overflow-y: scroll  ;
+}
+
+
+#commentsCard {
+    /* Specific styles for the comments card */
+    height: 400px; /* Set a fixed height */
+    max-height: 500px; /* Maximum height */
+}
+
+.scrollable-list {
+    flex: 1;
+    overflow-y: auto; /* Scrollable comments list */
+    margin-bottom: 20px; /* Space for the add comment section */
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c41bde;
+}
+
+.user-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #4e4094;
+    border: none;
+    border-radius: 50%; /* More circular */
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #733fb7;
+}
+
+/* Container for the comments section */
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #c41bde;
+}
+
+.comment-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.comment-username {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comment-text {
+    font-size: 12px;
+    font-weight: bold; /* Make comment text bold */
+}
+
+.no-comments, .no-likes {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #c41bde;
+    margin: 20px 0;
+}
+
+.add-comment-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#commentInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#addCommentButton {
+    padding: 10px 20px;
+    background-color: #4e4094;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addCommentButton:hover {
+    background-color: #41096e;
+}
+
+.post-caption {
+    margin-top: 20px; /* Space between the image and caption */
+    padding: 10px; /* Padding inside the caption area */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Line height for readability */
+    color: #46168e; /* Text color */
+    border-radius: 8px; /* Rounded corners for consistency */
+    background-color: #f9f9f9; /* Background color to differentiate from the rest of the page */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: absolute;
+    top: 390px;
+    left: 100px;
+    width: 300px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    overflow-y: scroll;
+}
